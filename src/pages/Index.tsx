@@ -8,7 +8,7 @@ const Index = () => {
       <div className="max-w-5xl mx-auto">
         <header className="text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-bold text-primary-700">Sistema de Agendamento</h1>
-          <p className="text-gray-600 mt-2">Agende e gerencie consultas de forma simples</p>
+          <p className="text-gray-600 mt-2">Gerencie suas consultas de forma simples e eficiente</p>
         </header>
         
         <AppointmentForm />
