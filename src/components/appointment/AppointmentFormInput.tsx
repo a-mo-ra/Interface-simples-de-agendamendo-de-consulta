@@ -113,7 +113,10 @@ const AppointmentFormInput: React.FC = () => {
               <SelectTrigger id="time" className="w-full">
                 <SelectValue placeholder="Selecione um horário" />
               </SelectTrigger>
-              <SelectContent className="max-h-[300px]">
+              <SelectContent 
+                className="max-h-[300px] pointer-events-auto"
+                position="popper"
+              >
                 {generateTimeOptions().map((timeOption) => (
                   <SelectItem key={timeOption} value={timeOption}>
                     {timeOption}
