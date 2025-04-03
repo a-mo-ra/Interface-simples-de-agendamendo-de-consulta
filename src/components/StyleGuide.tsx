@@ -277,7 +277,7 @@ const StyleGuide: React.FC = () => {
         <h2 className="text-2xl font-bold mb-4 border-b pb-2">Layout Responsivo</h2>
         <div className="space-y-4">
           <div>
-            <h3 className="text-lg font-semibold mb-2">Mobile (< 768px)</h3>
+            <h3 className="text-lg font-semibold mb-2">Mobile (menos de 768px)</h3>
             <p>- Layout em coluna única</p>
             <p>- Botões de status empilhados</p>
             <p>- Tamanho de fonte aumentado para inputs (16px)</p>
@@ -285,7 +285,7 @@ const StyleGuide: React.FC = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-2">Tablet e Desktop (≥ 768px)</h3>
+            <h3 className="text-lg font-semibold mb-2">Tablet e Desktop (maior ou igual a 768px)</h3>
             <p>- Layout em duas colunas para o formulário</p>
             <p>- Botões de status em linha</p>
             <p>- Tamanho de fonte reduzido para inputs (14px)</p>
