@@ -66,6 +66,10 @@ const AppointmentFormInput: React.FC = () => {
     setStatus("scheduled");
   };
 
+  const handleTimeChange = (value: string) => {
+    setTime(value);
+  };
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -109,16 +113,16 @@ const AppointmentFormInput: React.FC = () => {
           <Label htmlFor="time">Horário</Label>
           <div className="flex items-center">
             <Clock className="h-4 w-4 mr-2 text-muted-foreground" />
-            <Select value={time} onValueChange={setTime}>
+            <Select value={time} onValueChange={handleTimeChange}>
               <SelectTrigger id="time" className="w-full">
                 <SelectValue placeholder="Selecione um horário" />
               </SelectTrigger>
               <SelectContent 
-                className="max-h-[300px] pointer-events-auto"
+                className="max-h-[300px] pointer-events-auto bg-popover"
                 position="popper"
               >
                 {generateTimeOptions().map((timeOption) => (
-                  <SelectItem key={timeOption} value={timeOption}>
+                  <SelectItem key={timeOption} value={timeOption} className="cursor-pointer">
                     {timeOption}
                   </SelectItem>
                 ))}
