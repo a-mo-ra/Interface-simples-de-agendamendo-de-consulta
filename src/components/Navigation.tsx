@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Building, Contact, HelpCircle, Menu } from "lucide-react";
+import { Building, Contact, HelpCircle, Menu, LogIn } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,6 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const Navigation: React.FC = () => {
@@ -24,29 +25,36 @@ const Navigation: React.FC = () => {
           </span>
         </div>
 
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent">
-                <Menu className="h-5 w-5 mr-2" />
-                <span className="hidden sm:inline">Menu</span>
-              </NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-white">
-                <ul className="grid gap-3 p-4 w-[200px]">
-                  <ListItem href="#" title="Clínicas" icon={<Building className="h-4 w-4 mr-2" />}>
-                    Encontre clínicas próximas a você
-                  </ListItem>
-                  <ListItem href="#" title="Contato" icon={<Contact className="h-4 w-4 mr-2" />}>
-                    Entre em contato conosco
-                  </ListItem>
-                  <ListItem href="#" title="Suporte" icon={<HelpCircle className="h-4 w-4 mr-2" />}>
-                    Precisa de ajuda? Fale conosco
-                  </ListItem>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+        <div className="flex items-center gap-4">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent">
+                  <Menu className="h-5 w-5 mr-2" />
+                  <span className="hidden sm:inline">Menu</span>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-white">
+                  <ul className="grid gap-3 p-4 w-[200px]">
+                    <ListItem href="#" title="Clínicas" icon={<Building className="h-4 w-4 mr-2" />}>
+                      Encontre clínicas próximas a você
+                    </ListItem>
+                    <ListItem href="#" title="Contato" icon={<Contact className="h-4 w-4 mr-2" />}>
+                      Entre em contato conosco
+                    </ListItem>
+                    <ListItem href="#" title="Suporte" icon={<HelpCircle className="h-4 w-4 mr-2" />}>
+                      Precisa de ajuda? Fale conosco
+                    </ListItem>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+          
+          <Button size="sm" className="flex items-center gap-2">
+            <LogIn className="h-4 w-4" />
+            <span className="hidden sm:inline">Entrar</span>
+          </Button>
+        </div>
       </div>
     </nav>
   );
